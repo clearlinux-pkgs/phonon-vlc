@@ -4,7 +4,7 @@
 #
 Name     : phonon-vlc
 Version  : 0.10.2
-Release  : 1
+Release  : 2
 URL      : https://github.com/KDE/phonon-vlc/archive/v0.10.2.tar.gz
 Source0  : https://github.com/KDE/phonon-vlc/archive/v0.10.2.tar.gz
 Summary  : No detailed summary available
