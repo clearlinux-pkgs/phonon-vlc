@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xB92A5F04EC949121 (sitter@kde.org)
 #
 Name     : phonon-vlc
-Version  : 0.11.1
-Release  : 5
-URL      : https://download.kde.org/stable/phonon/phonon-backend-vlc/0.11.1/phonon-backend-vlc-0.11.1.tar.xz
-Source0  : https://download.kde.org/stable/phonon/phonon-backend-vlc/0.11.1/phonon-backend-vlc-0.11.1.tar.xz
-Source1  : https://download.kde.org/stable/phonon/phonon-backend-vlc/0.11.1/phonon-backend-vlc-0.11.1.tar.xz.sig
+Version  : 0.11.3
+Release  : 6
+URL      : https://download.kde.org/stable/phonon/phonon-backend-vlc/0.11.3/phonon-backend-vlc-0.11.3.tar.xz
+Source0  : https://download.kde.org/stable/phonon/phonon-backend-vlc/0.11.3/phonon-backend-vlc-0.11.3.tar.xz
+Source1  : https://download.kde.org/stable/phonon/phonon-backend-vlc/0.11.3/phonon-backend-vlc-0.11.3.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause LGPL-2.1
@@ -54,15 +54,15 @@ license components for the phonon-vlc package.
 
 
 %prep
-%setup -q -n phonon-backend-vlc-0.11.1
-cd %{_builddir}/phonon-backend-vlc-0.11.1
+%setup -q -n phonon-backend-vlc-0.11.3
+cd %{_builddir}/phonon-backend-vlc-0.11.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1593027090
+export SOURCE_DATE_EPOCH=1618699896
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -78,11 +78,11 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1593027090
+export SOURCE_DATE_EPOCH=1618699896
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/phonon-vlc
-cp %{_builddir}/phonon-backend-vlc-0.11.1/COPYING.LIB %{buildroot}/usr/share/package-licenses/phonon-vlc/9a26d3fdb6503d43ee9d39d82b61b6a99a862400
-cp %{_builddir}/phonon-backend-vlc-0.11.1/cmake/COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/phonon-vlc/ff3ed70db4739b3c6747c7f624fe2bad70802987
+cp %{_builddir}/phonon-backend-vlc-0.11.3/COPYING.LIB %{buildroot}/usr/share/package-licenses/phonon-vlc/9a26d3fdb6503d43ee9d39d82b61b6a99a862400
+cp %{_builddir}/phonon-backend-vlc-0.11.3/cmake/COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/phonon-vlc/ff3ed70db4739b3c6747c7f624fe2bad70802987
 pushd clr-build
 %make_install
 popd
@@ -93,14 +93,18 @@ popd
 %files data
 %defattr(-,root,root,-)
 /usr/share/locale/ca/LC_MESSAGES/phonon_vlc_qt.qm
+/usr/share/locale/ca@valencia/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/cs/LC_MESSAGES/phonon_vlc_qt.qm
+/usr/share/locale/da/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/de/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/en_GB/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/es/LC_MESSAGES/phonon_vlc_qt.qm
+/usr/share/locale/et/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/eu/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/fi/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/fr/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/gl/LC_MESSAGES/phonon_vlc_qt.qm
+/usr/share/locale/hu/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/id/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/it/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/ko/LC_MESSAGES/phonon_vlc_qt.qm
@@ -109,14 +113,14 @@ popd
 /usr/share/locale/pl/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/pt/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/pt_BR/LC_MESSAGES/phonon_vlc_qt.qm
+/usr/share/locale/ro/LC_MESSAGES/phonon_vlc_qt.qm
+/usr/share/locale/ru/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/sk/LC_MESSAGES/phonon_vlc_qt.qm
-/usr/share/locale/sr/LC_MESSAGES/phonon_vlc_qt.qm
-/usr/share/locale/sr@ijekavian/LC_MESSAGES/phonon_vlc_qt.qm
-/usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/phonon_vlc_qt.qm
-/usr/share/locale/sr@latin/LC_MESSAGES/phonon_vlc_qt.qm
+/usr/share/locale/sl/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/sv/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/uk/LC_MESSAGES/phonon_vlc_qt.qm
 /usr/share/locale/zh_CN/LC_MESSAGES/phonon_vlc_qt.qm
+/usr/share/locale/zh_TW/LC_MESSAGES/phonon_vlc_qt.qm
 
 %files lib
 %defattr(-,root,root,-)
